@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Box } from '@mui/material'
+import { Box, Card, Grid } from '@mui/material'
 import './App.css'
 import SideNav from './layouts/main/SideNav'
+import { useTheme } from '@emotion/react'
 
 function App() {
+  const theme = useTheme()
 
   return (
     <>
@@ -14,7 +16,17 @@ function App() {
             pl: '280px', 
           }}
         >
-        TEST
+          <Grid container>
+            <Grid item xs={4}>
+            <Card
+              sx={{
+                p: 3,
+              }}
+            >
+              Test
+            </Card>
+            </Grid>
+          </Grid>
       </Box>
     </>
   )
